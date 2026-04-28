@@ -956,7 +956,7 @@ def best_move(table, oldal : bool):
                 if not is_defended(calc_tabla, piece)[0]:       
                     print("rs", lepes)
                     better_moves.add((-(calc_tabla.tabla[piece[0]-1][piece[1]-1].material), (lepes[0], lepes[1])))
-                elif calc_tabla.tabla[piece[0]-1][piece[1]-1].material > can_be_taken(calc_tabla,piece)[1]:
+                elif calc_tabla.tabla[piece[0]-1][piece[1]-1].material < can_be_taken(calc_tabla,piece)[1]:
                     print("rst")                
                     better_moves.add((can_be_taken(calc_tabla,piece)[1]-calc_tabla.tabla[piece[0]-1][piece[1]-1].material,(lepes[0], lepes[1])))
 
